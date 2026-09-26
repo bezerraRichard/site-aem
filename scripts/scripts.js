@@ -9,7 +9,12 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  getMetadata,
+  toClassName,
 } from './aem.js';
+
+// page templates with their own code in /templates/{name}/{name}.(js|css)
+const TEMPLATES = ['produto'];
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -123,15 +128,37 @@ export function decorateMain(main) {
 }
 
 /**
+ * Loads the code of the page template set in the page metadata, if any.
+ * Only templates listed in TEMPLATES are loaded.
+ * @param {Element} doc The container element
+ */
+async function loadTemplate(doc) {
+  const template = toClassName(getMetadata('template'));
+  if (!TEMPLATES.includes(template)) return;
+  try {
+    const base = `${window.hlx.codeBasePath}/templates/${template}/${template}`;
+    const [mod] = await Promise.all([
+      import(`${base}.js`),
+      loadCSS(`${base}.css`),
+    ]);
+    if (mod.default) await mod.default(doc);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(`failed to load template ${template}`, error);
+  }
+}
+
+/**
  * Loads everything needed to get to LCP.
  * @param {Element} doc The container element
  */
 async function loadEager(doc) {
-  document.documentElement.lang = 'en';
+  document.documentElement.lang = 'pt-PT';
   decorateTemplateAndTheme();
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
+    await loadTemplate(doc);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
