@@ -17,6 +17,8 @@
   --brand-dark-color: #007179;
   --brand-navy-color: #273c4e;
   --accent-color: #f7d54e;
+  --cta-color: #705aa3;
+  --cta-hover-color: #5a4785;
 
   /* colors */
   --background-color: white;
@@ -24,6 +26,9 @@
   --dark-color: #54616c;
   --text-color: #222;
   --border-color: #dae0e5;
+  --muted-border-color: #808b94;
+  --partner-background-color: #e5dfea;
+  --footer-bottom-background-color: #e0e7e8;
 
   /* brand teal is below 4.5:1 on white, so text links use the dark teal */
   --link-color: var(--brand-dark-color);
@@ -65,6 +70,9 @@
 
 @media (width >= 900px) {
   :root {
+    /* nav height: utility bar + brand row + sections row */
+    --nav-height: 168px;
+
     /* heading sizes */
     --heading-font-size-xxl: 40px;
     --heading-font-size-xl: 32px;
@@ -184,7 +192,7 @@ button.button {
   max-width: 100%;
   margin: 0;
   border: 2px solid transparent;
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 0.75em 1.5em;
   font: inherit;
   font-weight: 500;
