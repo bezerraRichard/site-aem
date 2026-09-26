@@ -21,6 +21,23 @@
           "name": "keywords",
           "multi": true,
           "label": "Keywords"
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "template",
+          "label": "Template",
+          "description": "Layout da página",
+          "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
+            {
+              "name": "Produto",
+              "value": "produto"
+            }
+          ]
         }
       ]
     }
