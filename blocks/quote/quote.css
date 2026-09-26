@@ -1,25 +1,42 @@
-.block.quote {
+.quote {
   display: flex;
   flex-direction: column;
   margin: 1rem 0;
   padding: 0 0 24px;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--brand-dark-color);
+  color: var(--background-color);
 }
 
-.block.quote blockquote {
+.quote blockquote {
   margin: 16px;
   text-indent: 0;
 }
 
-.block.quote > div:last-child > div {
+.quote a:any-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.quote a:hover {
+  color: var(--accent-color);
+}
+
+.quote blockquote > :first-child {
+  margin-top: 0;
+}
+
+.quote blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.quote > div:last-child > div {
   position: relative;
   margin: 0 16px;
-  font-size: small;
+  font-size: var(--body-font-size-s);
   font-style: italic;
 }
 
-.block.quote > div:last-child > div::after {
+.quote > div:last-child > div::after {
   position: absolute;
   bottom: -8px;
   left: 0;
@@ -27,5 +44,5 @@
   width: 30px;
   height: 5px;
   content: "";
-  background-color: darkgray;
+  background-color: var(--accent-color);
 }
