@@ -1,20 +1,196 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  background-color: var(--background-color);
+  font-size: var(--body-font-size-s);
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
-}
-
-footer .footer p {
+footer .footer p,
+footer .footer ul {
   margin: 0;
 }
 
+footer .footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer .footer a:any-link {
+  color: var(--text-color);
+}
+
+footer .footer .section > .default-content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+footer .footer .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 6px;
+  vertical-align: -3px;
+}
+
+/* need help */
+footer .footer-help {
+  border-bottom: 1px solid var(--light-color);
+}
+
+footer .footer .footer-help > .default-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+}
+
+footer .footer-help h2,
+footer .footer-help h3 {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+}
+
+footer .footer-help .button-wrapper {
+  margin: 0;
+}
+
+footer .footer-help a.button.secondary {
+  border-color: var(--text-color);
+  color: var(--text-color);
+}
+
+footer .footer-help a.button.secondary:hover,
+footer .footer-help a.button.secondary:focus-visible {
+  border-color: var(--text-color);
+  background-color: var(--light-color);
+  color: var(--text-color);
+}
+
+/* channel cards */
+footer .footer .footer-cards > .default-content-wrapper {
+  display: grid;
+  gap: 32px;
+}
+
+footer .footer-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer .footer-card h3 {
+  margin: 0;
+  color: var(--brand-color);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+footer .footer-card p:last-child {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+footer .footer-card p:last-child a:any-link {
+  border-bottom: 2px solid var(--brand-color);
+  color: var(--brand-dark-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+footer .footer-card p:last-child a:hover {
+  color: var(--brand-navy-color);
+}
+
+/* shareholder */
+footer .footer-partner {
+  background-color: var(--partner-background-color);
+}
+
+footer .footer .footer-partner > .default-content-wrapper {
+  padding-block: 16px;
+  line-height: 0;
+}
+
+footer .footer-partner img {
+  width: auto;
+  height: 48px;
+}
+
+/* link columns */
+footer .footer-links {
+  background-color: var(--light-color);
+}
+
+footer .footer .footer-links > .default-content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 32px;
+}
+
+footer .footer-column h3 {
+  margin: 0 0 16px;
+  font-size: var(--body-font-size-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+footer .footer-column li {
+  padding: 4px 0;
+  font-size: var(--body-font-size-xs);
+}
+
+/* legal */
+footer .footer-legal {
+  background-color: var(--footer-bottom-background-color);
+}
+
+footer .footer .footer-legal > .default-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-block: 24px;
+}
+
+footer .footer-legal ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+footer .footer-legal li,
+footer .footer-legal .default-content-wrapper > p {
+  font-size: var(--body-font-size-xs);
+}
+
+@media (width >= 600px) {
+  footer .footer .footer-cards > .default-content-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer .section > .default-content-wrapper {
+    padding: 40px 32px;
+  }
+
+  footer .footer-help h2,
+  footer .footer-help h3 {
+    flex-basis: auto;
+    margin-right: 8px;
+  }
+
+  footer .footer .footer-cards > .default-content-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  footer .footer .footer-links > .default-content-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  footer .footer .footer-legal > .default-content-wrapper {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 24px;
   }
 }
