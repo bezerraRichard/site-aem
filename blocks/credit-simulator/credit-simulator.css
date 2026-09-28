@@ -1,0 +1,140 @@
+.credit-simulator {
+  margin: 1rem 0;
+}
+
+.credit-simulator .credit-simulator-app {
+  display: grid;
+  gap: 24px;
+  padding: 24px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--background-color);
+}
+
+.credit-simulator .credit-simulator-title {
+  margin-top: 0;
+}
+
+/* fields */
+.credit-simulator .credit-simulator-field + .credit-simulator-field {
+  margin-top: 24px;
+}
+
+.credit-simulator .credit-simulator-field-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.credit-simulator label {
+  font-weight: 700;
+  color: var(--brand-navy-color);
+}
+
+.credit-simulator .credit-simulator-field-input {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.credit-simulator input[type="number"] {
+  width: 11ch;
+  padding: 8px;
+  border: 1px solid var(--muted-border-color);
+  border-radius: 4px;
+  font: inherit;
+  text-align: right;
+}
+
+.credit-simulator input[type="range"] {
+  width: 100%;
+  margin: 16px 0 4px;
+  accent-color: var(--brand-dark-color);
+}
+
+.credit-simulator input[type="number"]:focus-visible,
+.credit-simulator input[type="range"]:focus-visible {
+  outline: 2px solid var(--link-color);
+  outline-offset: 2px;
+}
+
+.credit-simulator .credit-simulator-range-limits {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--body-font-size-xs);
+  color: var(--dark-color);
+}
+
+/* result */
+.credit-simulator .credit-simulator-result {
+  padding: 24px 16px;
+  border-radius: 8px;
+  background-color: var(--brand-navy-color);
+  color: var(--background-color);
+}
+
+.credit-simulator .credit-simulator-payment-label {
+  margin: 0;
+  font-size: var(--body-font-size-s);
+}
+
+.credit-simulator .credit-simulator-payment {
+  margin: 4px 0 16px;
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.credit-simulator dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.credit-simulator dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+  font-size: var(--body-font-size-s);
+}
+
+.credit-simulator dd {
+  margin: 0;
+  font-weight: 700;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.credit-simulator .credit-simulator-result .button-wrapper {
+  margin: 24px 0 0;
+}
+
+.credit-simulator .credit-simulator-result .button {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.credit-simulator .credit-simulator-disclaimer {
+  margin: 0;
+  font-size: var(--body-font-size-xs);
+  color: var(--dark-color);
+}
+
+@media (width >= 900px) {
+  .credit-simulator .credit-simulator-app {
+    grid-template-columns: 3fr 2fr;
+    gap: 32px;
+    padding: 32px;
+  }
+
+  .credit-simulator .credit-simulator-disclaimer {
+    grid-column: 1 / -1;
+  }
+}
