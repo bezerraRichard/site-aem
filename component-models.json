@@ -235,6 +235,95 @@
     ]
   },
   {
+    "id": "credit-simulator",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "rate",
+        "label": "Nominal annual rate - TAN (%)"
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "fee",
+        "label": "Upfront fee (€)",
+        "description": "Added to the total amount and to the TAEG. Use 0 when there is none."
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "minAmount",
+        "label": "Minimum amount (€)"
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "maxAmount",
+        "label": "Maximum amount (€)"
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "amountStep",
+        "label": "Amount step (€)"
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "defaultAmount",
+        "label": "Initial amount (€)"
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "minTerm",
+        "label": "Minimum term (months)"
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "maxTerm",
+        "label": "Maximum term (months)"
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "termStep",
+        "label": "Term step (months)"
+      },
+      {
+        "component": "number",
+        "valueType": "number",
+        "name": "defaultTerm",
+        "label": "Initial term (months)"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "buttonLabel",
+        "label": "Button text"
+      },
+      {
+        "component": "aem-content",
+        "name": "buttonLink",
+        "label": "Button link"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "disclaimer",
+        "label": "Disclaimer"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
