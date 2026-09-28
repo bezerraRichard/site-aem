@@ -178,6 +178,44 @@
     ]
   },
   {
+    "id": "chart",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Vertical columns",
+            "value": "vertical"
+          },
+          {
+            "name": "Values in percent",
+            "value": "percent"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "chart-bar",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Label"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "value",
+        "label": "Value",
+        "description": "A number, e.g. 85 or 4,5"
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
@@ -248,6 +286,77 @@
         "name": "author",
         "label": "Author",
         "value": ""
+      }
+    ]
+  },
+  {
+    "id": "table",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Striped rows",
+            "value": "striped"
+          },
+          {
+            "name": "Bordered",
+            "value": "bordered"
+          },
+          {
+            "name": "No header row",
+            "value": "no-header"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "table-row",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "column1",
+        "label": "Column 1",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "column2",
+        "label": "Column 2",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "column3",
+        "label": "Column 3",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "column4",
+        "label": "Column 4",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "column5",
+        "label": "Column 5",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "column6",
+        "label": "Column 6",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "column7",
+        "label": "Column 7",
+        "valueType": "string"
       }
     ]
   }
