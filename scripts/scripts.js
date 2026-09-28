@@ -115,6 +115,20 @@ export function decorateButtons(main) {
 }
 
 /**
+ * Marks links to English pages with lang="en", which the authoring backend drops.
+ * A link is English when the first segment of its path is "en".
+ * @param {Element} main The container element
+ */
+export function decorateLinkLanguages(main) {
+  main.querySelectorAll('a[href]:not([lang])').forEach((a) => {
+    try {
+      const [first] = new URL(a.href, window.location).pathname.split('/').filter(Boolean);
+      if (first === 'en') a.lang = 'en';
+    } catch { /* ignore invalid urls */ }
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -125,6 +139,7 @@ export function decorateMain(main) {
   decorateSections(main);
   decorateBlocks(main);
   decorateButtons(main);
+  decorateLinkLanguages(main);
 }
 
 /**
