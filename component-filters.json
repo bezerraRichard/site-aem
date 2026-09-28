@@ -16,13 +16,21 @@
       "cards",
       "columns",
       "fragment",
-      "quote"
+      "quote",
+      "table",
+      "chart"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "chart",
+    "components": [
+      "chart-bar"
     ]
   },
   {
@@ -38,6 +46,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "table",
+    "components": [
+      "table-row"
     ]
   }
 ]
