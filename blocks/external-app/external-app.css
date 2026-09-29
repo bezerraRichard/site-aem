@@ -2,7 +2,7 @@
   margin: 1rem 0;
 }
 
-/* reserve space while the app loads to limit layout shift */
+/* reserve space while the app loads to limit layout shift (the app renders around 700px tall) */
 .external-app .external-app-root:empty {
   min-height: 480px;
   border-radius: 8px;
