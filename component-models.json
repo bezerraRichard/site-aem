@@ -324,6 +324,32 @@
     ]
   },
   {
+    "id": "external-app",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "src",
+        "label": "Loader script URL",
+        "description": "external-index.js of an app hosted on https://srv.novobanco.pt"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "rootId",
+        "label": "Root element id",
+        "description": "Id of the element the app renders into (usually root)"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "fallback",
+        "label": "Fallback content",
+        "description": "Shown where the app cannot run"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {

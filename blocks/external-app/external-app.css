@@ -1,0 +1,24 @@
+.external-app {
+  margin: 1rem 0;
+}
+
+/* reserve space while the app loads to limit layout shift (the app renders around 700px tall) */
+.external-app .external-app-root:empty {
+  min-height: 700px;
+  border-radius: 8px;
+  background-color: var(--light-color);
+}
+
+.external-app .external-app-fallback {
+  padding: 24px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.external-app .external-app-fallback > :first-child {
+  margin-top: 0;
+}
+
+.external-app .external-app-fallback > :last-child {
+  margin-bottom: 0;
+}
