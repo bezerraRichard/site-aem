@@ -18,7 +18,11 @@ import {
 } from './experiment-loader.js';
 
 const experimentationConfig = {
-  prodHost: 'www.novobanco.pt',
+  // production is the live site and its .aem.live origin; everything else is preview
+  isProd: () => {
+    const { hostname } = window.location;
+    return hostname.endsWith('.aem.live') || hostname === 'novobanco.pt' || hostname.endsWith('.novobanco.pt');
+  },
   audiences: {
     mobile: () => window.innerWidth < 600,
     desktop: () => window.innerWidth >= 600,
