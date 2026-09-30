@@ -1,7 +1,4 @@
 {
-  "project": "AEM XWalk Boilerplate",
-  "editUrlLabel": "AEM Editor",
-  "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open",
   "plugins": [
     {
       "id": "aem-experimentation",
@@ -10,6 +7,9 @@
       },
       "environments": [
         "preview"
+      ],
+      "includePaths": [
+        "**.docx**"
       ],
       "event": "aem-experimentation-sidekick"
     }

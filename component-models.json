@@ -37,6 +37,83 @@
             "value": "produto"
           }
         ]
+      },
+      {
+        "component": "tab",
+        "name": "experimentation-tab",
+        "label": "Experimentação"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "experiment",
+        "label": "Experiment",
+        "description": "Identificador do teste, por exemplo NB-EXP-001. Deixar vazio se a página não estiver em teste."
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "experimentVariants",
+        "label": "Experiment Variants",
+        "multi": true,
+        "description": "Páginas com as variantes (challengers) desta página."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "experimentSplit",
+        "label": "Experiment Split",
+        "description": "Opcional. Percentagem de tráfego de cada variante, separada por vírgula (por exemplo 20, 30). O restante fica na página atual. Por defeito o tráfego é dividido em partes iguais."
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "experimentStatus",
+        "label": "Experiment Status",
+        "options": [
+          {
+            "name": "Active",
+            "value": ""
+          },
+          {
+            "name": "Inactive",
+            "value": "inactive"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "experimentRequiresConsent",
+        "label": "Experiment Requires Consent",
+        "description": "Só mostra variantes a visitantes que deram consentimento.",
+        "options": [
+          {
+            "name": "Não",
+            "value": ""
+          },
+          {
+            "name": "Sim",
+            "value": "true"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "cq:robotsTags",
+        "label": "Robots",
+        "description": "Usar noindex, nofollow nas páginas de variante para não serem indexadas.",
+        "options": [
+          {
+            "name": "Default",
+            "value": ""
+          },
+          {
+            "name": "noindex, nofollow",
+            "value": "noindex, nofollow"
+          }
+        ]
       }
     ]
   },
