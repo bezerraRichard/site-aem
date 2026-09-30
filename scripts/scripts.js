@@ -12,6 +12,18 @@ import {
   getMetadata,
   toClassName,
 } from './aem.js';
+import {
+  runExperimentation,
+  runExperimentationLazy,
+} from './experiment-loader.js';
+
+const experimentationConfig = {
+  prodHost: 'www.novobanco.pt',
+  audiences: {
+    mobile: () => window.innerWidth < 600,
+    desktop: () => window.innerWidth >= 600,
+  },
+};
 
 // page templates with their own code in /templates/{name}/{name}.(js|css)
 const TEMPLATES = ['produto'];
@@ -170,6 +182,7 @@ async function loadTemplate(doc) {
 async function loadEager(doc) {
   document.documentElement.lang = 'pt-PT';
   decorateTemplateAndTheme();
+  await runExperimentation(doc, experimentationConfig);
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
@@ -206,6 +219,7 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+  runExperimentationLazy(doc, experimentationConfig);
 }
 
 /**

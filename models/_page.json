@@ -38,6 +38,96 @@
               "value": "produto"
             }
           ]
+        },
+        {
+          "component": "tab",
+          "name": "experimentation-tab",
+          "label": "Experimentação"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "experiment",
+          "label": "Experiment",
+          "description": "Identificador do teste, por exemplo NB-EXP-001. Deixar vazio se a página não estiver em teste."
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "experiment-variants",
+          "label": "Experiment Variants",
+          "description": "Caminhos publicados das variantes (challengers), separados por vírgula, por exemplo /experiments/nb-exp-001/credito-habitacao"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "experiment-split",
+          "label": "Experiment Split",
+          "description": "Opcional. Percentagem de tráfego de cada variante, separada por vírgula (por exemplo 20, 30). O restante fica na página atual. Por defeito o tráfego é dividido em partes iguais."
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "experiment-status",
+          "label": "Experiment Status",
+          "options": [
+            {
+              "name": "Active",
+              "value": ""
+            },
+            {
+              "name": "Inactive",
+              "value": "inactive"
+            }
+          ]
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "experiment-start-date",
+          "label": "Experiment Start Date",
+          "description": "Opcional. Data de início no formato AAAA-MM-DD."
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "experiment-end-date",
+          "label": "Experiment End Date",
+          "description": "Opcional. Data de fim no formato AAAA-MM-DD."
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "experiment-requires-consent",
+          "label": "Experiment Requires Consent",
+          "description": "Só mostra variantes a visitantes que deram consentimento.",
+          "options": [
+            {
+              "name": "Não",
+              "value": ""
+            },
+            {
+              "name": "Sim",
+              "value": "true"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "valueType": "string",
+          "name": "robots",
+          "label": "Robots",
+          "description": "Usar noindex, nofollow nas páginas de variante para não serem indexadas.",
+          "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
+            {
+              "name": "noindex, nofollow",
+              "value": "noindex, nofollow"
+            }
+          ]
         }
       ]
     }
