@@ -51,23 +51,24 @@
         "description": "Identificador do teste, por exemplo NB-EXP-001. Deixar vazio se a página não estiver em teste."
       },
       {
-        "component": "text",
+        "component": "aem-content",
         "valueType": "string",
-        "name": "experiment-variants",
+        "name": "experimentVariants",
         "label": "Experiment Variants",
-        "description": "Caminhos publicados das variantes (challengers), separados por vírgula, por exemplo /experiments/nb-exp-001/credito-habitacao"
+        "multi": true,
+        "description": "Páginas com as variantes (challengers) desta página."
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "experiment-split",
+        "name": "experimentSplit",
         "label": "Experiment Split",
         "description": "Opcional. Percentagem de tráfego de cada variante, separada por vírgula (por exemplo 20, 30). O restante fica na página atual. Por defeito o tráfego é dividido em partes iguais."
       },
       {
         "component": "select",
         "valueType": "string",
-        "name": "experiment-status",
+        "name": "experimentStatus",
         "label": "Experiment Status",
         "options": [
           {
@@ -81,23 +82,9 @@
         ]
       },
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "experiment-start-date",
-        "label": "Experiment Start Date",
-        "description": "Opcional. Data de início no formato AAAA-MM-DD."
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "experiment-end-date",
-        "label": "Experiment End Date",
-        "description": "Opcional. Data de fim no formato AAAA-MM-DD."
-      },
-      {
         "component": "select",
         "valueType": "string",
-        "name": "experiment-requires-consent",
+        "name": "experimentRequiresConsent",
         "label": "Experiment Requires Consent",
         "description": "Só mostra variantes a visitantes que deram consentimento.",
         "options": [
@@ -114,7 +101,7 @@
       {
         "component": "select",
         "valueType": "string",
-        "name": "robots",
+        "name": "cq:robotsTags",
         "label": "Robots",
         "description": "Usar noindex, nofollow nas páginas de variante para não serem indexadas.",
         "options": [
