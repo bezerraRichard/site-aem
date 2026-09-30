@@ -43,6 +43,9 @@ function toggleMenu(nav, forceExpanded = null) {
 function decorateDropdowns(navSections) {
   const topItems = navSections.querySelectorAll(':scope .default-content-wrapper > ul > li');
   topItems.forEach((item, i) => {
+    // direct links arrive wrapped in a paragraph; unwrap them so they get the nav link styles
+    item.querySelectorAll(':scope > p').forEach((p) => p.replaceWith(...p.childNodes));
+
     const panel = item.querySelector(':scope > ul');
     if (!panel) return;
 
