@@ -20,7 +20,8 @@
       "table",
       "chart",
       "credit-simulator",
-      "external-app"
+      "external-app",
+      "web-view"
     ]
   },
   {
