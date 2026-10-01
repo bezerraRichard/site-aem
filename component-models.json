@@ -551,5 +551,51 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "web-view",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "src",
+        "label": "Page URL",
+        "description": "https address of the page to show. Only approved domains are shown (today: srv.novobanco.pt)."
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Title",
+        "description": "Short description of the embedded page, read by screen readers"
+      },
+      {
+        "component": "select",
+        "valueType": "string",
+        "name": "height",
+        "label": "Height",
+        "options": [
+          {
+            "name": "Small (400px)",
+            "value": "400"
+          },
+          {
+            "name": "Medium (600px)",
+            "value": "600"
+          },
+          {
+            "name": "Large (800px)",
+            "value": "800"
+          }
+        ]
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "fallback",
+        "label": "Fallback content",
+        "description": "Shown when the page cannot be embedded"
+      }
+    ]
   }
 ]

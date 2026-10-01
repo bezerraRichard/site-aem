@@ -1,0 +1,37 @@
+.web-view {
+  margin: 1rem 0;
+}
+
+.web-view iframe {
+  display: block;
+  width: 100%;
+  height: var(--web-view-height, 600px);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--light-color);
+}
+
+.web-view .web-view-open {
+  margin: 8px 0 0;
+  font-size: var(--body-font-size-s);
+  text-align: right;
+}
+
+.web-view .web-view-fallback {
+  padding: 24px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.web-view .web-view-fallback > :first-child {
+  margin-top: 0;
+}
+
+.web-view .web-view-fallback > :last-child {
+  margin-bottom: 0;
+}
+
+.web-view .web-view-note {
+  color: var(--brand-dark-color);
+  font-weight: 600;
+}
